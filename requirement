@@ -1,0 +1,13 @@
+argparse
+Pillow
+torch
+opencv-python
+numpy
+tensorflow
+flask
+flask-cors
+werkzeug
+python-dotenv
+ultralytics
+cloudinary
+requests

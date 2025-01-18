@@ -23,6 +23,7 @@ import cloudinary
 from cloudinary.uploader import upload
 from dotenv import load_dotenv
 from flask_cors import CORS
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 load_dotenv()
