@@ -11,3 +11,4 @@ python-dotenv
 ultralytics
 cloudinary
 requests
+gunicorn
