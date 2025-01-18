@@ -71,7 +71,6 @@ def predict_img():
         file_extension = f.filename.rsplit('.', 1)[1].lower()
         if file_extension == 'jpg':
             img = cv2.imread(temp_filepath)
-            model = YOLO('yolov9c.pt')
             detections = model(img, save=False)  # Run detection without saving locally
             # Convert result image to Cloudinary-compatible format
             result_img = detections[0].plot()  # Visualize detections
@@ -170,5 +169,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Flask app exposing yolov9 models")
     parser.add_argument("--port", default=5000, type=int, help="port number")
     args = parser.parse_args()
-    model = YOLO('yolov9c.pt')
     app.run(host="0.0.0.0", port=8080, debug=True) 
